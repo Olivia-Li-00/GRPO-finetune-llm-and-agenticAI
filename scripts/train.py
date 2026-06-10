@@ -59,7 +59,12 @@ from config import (
 from data import build_train_val_test
 from model import build_mesh, download_weights, load_base_model, get_lora_model, load_tokenizer
 from rewards import REWARD_FNS
+from config import SEED
+import random
+import numpy as np
 
+random.seed(SEED)
+np.random.seed(SEED)
 
 def login_services():
     load_dotenv()

@@ -1,0 +1,194 @@
+Downloading google/gemma-3-1b-it from Hugging Face...
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 23211.42it/s]
+/home/ext_ziyingli00_gmail_com/venvs/tunix/lib/python3.12/site-packages/qwix/_src/providers/lora.py:44: UserWarning: rngs must be provided for NNX models to initialize LoRA weights. Please specify rngs=nnx.Rngs(...) in apply_lora_to_model.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1780995306.135908  121176 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1780995306.137280  121176 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1780995307.308167  121176 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1780995307.308908  121176 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING:absl:Variant folder data/train/gsm8k/1.0.0 has no dataset_info.json
+Model downloaded to: /home/ext_ziyingli00_gmail_com/.cache/huggingface/hub/models--google--gemma-3-1b-it/snapshots/dcc83ea841ab6100d6b47a070329e1ba4cf78752
+Downloading and preparing dataset Unknown size (download: Unknown size, generated: Unknown size, total: Unknown size) to data/train/gsm8k/1.0.0...
+Dl Completed...: 0 url [00:00, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/1 [00:00<?, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/2 [00:00<?, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/3 [00:00<?, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/4 [00:00<?, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/4 [00:00<?, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/4 [00:00<?, ? url/s]
+Dl Size...:   0%|          | 0/1 [00:00<?, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/4 [00:00<?, ? url/s]
+Dl Size...:   0%|          | 0/2 [00:00<?, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/4 [00:00<?, ? url/s]
+Dl Size...:   0%|          | 0/2 [00:00<?, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  25%|██▌       | 1/4 [00:00<00:00, 10.86 url/s]
+Dl Size...:   0%|          | 0/2 [00:00<?, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  25%|██▌       | 1/4 [00:00<00:00, 10.05 url/s]
+Dl Size...:  50%|█████     | 1/2 [00:00<00:00, 10.05 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  25%|██▌       | 1/4 [00:00<00:00,  9.61 url/s]
+Dl Size...: 100%|██████████| 2/2 [00:00<00:00, 19.22 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  25%|██▌       | 1/4 [00:00<00:00,  8.98 url/s]
+Dl Size...: 3 MiB [00:00, 26.95 MiB/s]                     [A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  25%|██▌       | 1/4 [00:00<00:00,  8.88 url/s]
+Dl Size...: 4 MiB [00:00, 35.51 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  50%|█████     | 2/4 [00:00<00:00, 17.48 url/s]
+Dl Size...: 4 MiB [00:00, 34.96 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  50%|█████     | 2/4 [00:00<00:00, 16.51 url/s]
+Dl Size...: 5 MiB [00:00, 41.28 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  50%|█████     | 2/4 [00:00<00:00, 16.37 url/s]
+Dl Size...: 6 MiB [00:00, 49.12 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  75%|███████▌  | 3/4 [00:00<00:00, 23.22 url/s]
+Dl Size...: 6 MiB [00:00, 46.45 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  75%|███████▌  | 3/4 [00:00<00:00, 22.94 url/s]
+Dl Size...: 7 MiB [00:00, 53.53 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  75%|███████▌  | 3/4 [00:00<00:00, 21.83 url/s]
+Dl Size...: 8 MiB [00:00, 58.22 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...: 100%|██████████| 4/4 [00:00<00:00, 28.87 url/s]
+Dl Size...: 8 MiB [00:00, 57.76 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[AExtraction completed...: 0 file [00:00, ? file/s]
+Dl Size...: 8 MiB [00:00, 57.25 MiB/s]
+Dl Completed...: 100%|██████████| 4/4 [00:00<00:00, 28.60 url/s]
+Generating splits...:   0%|          | 0/4 [00:00<?, ? splits/s]
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Shuffling data/train/gsm8k/incomplete.B1QDIP_1.0.0/gsm8k-train.array_record*...:   0%|          | 0/7473 [00:00<?, ? examples/s][A
+                                                                                                                                [AGenerating splits...:  25%|██▌       | 1/4 [00:00<00:01,  1.57 splits/s]
+Generating test examples...: 0 examples [00:00, ? examples/s][A
+                                                             [A
+Shuffling data/train/gsm8k/incomplete.B1QDIP_1.0.0/gsm8k-test.array_record*...:   0%|          | 0/1319 [00:00<?, ? examples/s][A
+                                                                                                                               [A
+Generating train_socratic examples...: 0 examples [00:00, ? examples/s][A
+                                                                       [A
+Shuffling data/train/gsm8k/incomplete.B1QDIP_1.0.0/gsm8k-train_socratic.array_record*...:   0%|          | 0/7473 [00:00<?, ? examples/s][A
+                                                                                                                                         [AGenerating splits...:  75%|███████▌  | 3/4 [00:01<00:00,  2.79 splits/s]
+Generating test_socratic examples...: 0 examples [00:00, ? examples/s][A
+                                                                      [A
+Shuffling data/train/gsm8k/incomplete.B1QDIP_1.0.0/gsm8k-test_socratic.array_record*...:   0%|          | 0/1319 [00:00<?, ? examples/s][A
+                                                                                                                                        [A                                                                        WARNING:absl:Variant folder data/test/gsm8k/1.0.0 has no dataset_info.json
+Dataset gsm8k downloaded and prepared to data/train/gsm8k/1.0.0. Subsequent calls will reuse this data.
+Downloading and preparing dataset Unknown size (download: Unknown size, generated: Unknown size, total: Unknown size) to data/test/gsm8k/1.0.0...
+Dl Completed...: 0 url [00:00, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/1 [00:00<?, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/2 [00:00<?, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/3 [00:00<?, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/4 [00:00<?, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/4 [00:00<?, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/4 [00:00<?, ? url/s]
+Dl Size...: 0 MiB [00:00, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/4 [00:00<?, ? url/s]
+Dl Size...:   0%|          | 0/1 [00:00<?, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:   0%|          | 0/4 [00:00<?, ? url/s]
+Dl Size...:   0%|          | 0/2 [00:00<?, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  25%|██▌       | 1/4 [00:00<00:00, 15.14 url/s]
+Dl Size...:   0%|          | 0/2 [00:00<?, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  50%|█████     | 2/4 [00:00<00:00, 28.38 url/s]
+Dl Size...:   0%|          | 0/2 [00:00<?, ? MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  50%|█████     | 2/4 [00:00<00:00, 27.48 url/s]
+Dl Size...:  50%|█████     | 1/2 [00:00<00:00, 13.74 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  50%|█████     | 2/4 [00:00<00:00, 26.99 url/s]
+Dl Size...: 100%|██████████| 2/2 [00:00<00:00, 26.99 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  50%|█████     | 2/4 [00:00<00:00, 24.62 url/s]
+Dl Size...: 3 MiB [00:00, 36.92 MiB/s]                     [A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  50%|█████     | 2/4 [00:00<00:00, 23.97 url/s]
+Dl Size...: 4 MiB [00:00, 47.93 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  50%|█████     | 2/4 [00:00<00:00, 22.33 url/s]
+Dl Size...: 5 MiB [00:00, 55.81 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  50%|█████     | 2/4 [00:00<00:00, 21.70 url/s]
+Dl Size...: 6 MiB [00:00, 65.11 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  50%|█████     | 2/4 [00:00<00:00, 20.45 url/s]
+Dl Size...: 7 MiB [00:00, 71.59 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  75%|███████▌  | 3/4 [00:00<00:00, 29.80 url/s]
+Dl Size...: 7 MiB [00:00, 69.54 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...:  75%|███████▌  | 3/4 [00:00<00:00, 28.23 url/s]
+Dl Size...: 8 MiB [00:00, 75.29 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[ADl Completed...: 100%|██████████| 4/4 [00:00<00:00, 37.24 url/s]
+Dl Size...: 8 MiB [00:00, 74.48 MiB/s][A
+
+Extraction completed...: 0 file [00:00, ? file/s][A[AExtraction completed...: 0 file [00:00, ? file/s]
+Dl Size...: 8 MiB [00:00, 73.51 MiB/s]
+Dl Completed...: 100%|██████████| 4/4 [00:00<00:00, 36.72 url/s]
+Generating splits...:   0%|          | 0/4 [00:00<?, ? splits/s]
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Shuffling data/test/gsm8k/incomplete.FPGBW3_1.0.0/gsm8k-train.array_record*...:   0%|          | 0/7473 [00:00<?, ? examples/s][A
+                                                                                                                               [AGenerating splits...:  25%|██▌       | 1/4 [00:00<00:01,  2.37 splits/s]
+Generating test examples...: 0 examples [00:00, ? examples/s][A
+                                                             [A
+Shuffling data/test/gsm8k/incomplete.FPGBW3_1.0.0/gsm8k-test.array_record*...:   0%|          | 0/1319 [00:00<?, ? examples/s][A
+                                                                                                                              [A
+Generating train_socratic examples...: 0 examples [00:00, ? examples/s][A
+                                                                       [A
+Shuffling data/test/gsm8k/incomplete.FPGBW3_1.0.0/gsm8k-train_socratic.array_record*...:   0%|          | 0/7473 [00:00<?, ? examples/s][A
+                                                                                                                                        [AGenerating splits...:  75%|███████▌  | 3/4 [00:00<00:00,  3.31 splits/s]
+Generating test_socratic examples...: 0 examples [00:00, ? examples/s][A
+                                                                      [A
+Shuffling data/test/gsm8k/incomplete.FPGBW3_1.0.0/gsm8k-test_socratic.array_record*...:   0%|          | 0/1319 [00:00<?, ? examples/s][A
+                                                                                                                                       [A                                                                        Dataset gsm8k downloaded and prepared to data/test/gsm8k/1.0.0. Subsequent calls will reuse this data.
+  0%|          | 0/64 [00:00<?, ?it/s]  2%|▏         | 1/64 [00:13<14:28, 13.78s/it]  3%|▎         | 2/64 [00:14<06:09,  5.96s/it]  5%|▍         | 3/64 [00:15<04:01,  3.96s/it]  6%|▋         | 4/64 [00:32<08:57,  8.95s/it]  8%|▊         | 5/64 [00:32<05:44,  5.84s/it]  9%|▉         | 6/64 [00:33<03:50,  3.97s/it] 11%|█         | 7/64 [00:33<02:35,  2.73s/it] 12%|█▎        | 8/64 [00:33<01:50,  1.98s/it] 14%|█▍        | 9/64 [00:33<01:17,  1.41s/it] 16%|█▌        | 10/64 [00:34<00:57,  1.06s/it] 17%|█▋        | 11/64 [00:34<00:42,  1.24it/s] 19%|█▉        | 12/64 [00:34<00:34,  1.50it/s] 20%|██        | 13/64 [00:36<00:48,  1.06it/s] 22%|██▏       | 14/64 [00:37<00:55,  1.12s/it] 23%|██▎       | 15/64 [00:38<00:44,  1.09it/s] 25%|██▌       | 16/64 [00:38<00:38,  1.26it/s] 27%|██▋       | 17/64 [00:40<00:48,  1.03s/it] 28%|██▊       | 18/64 [00:40<00:36,  1.26it/s] 30%|██▉       | 19/64 [00:40<00:30,  1.48it/s] 31%|███▏      | 20/64 [00:41<00:25,  1.75it/s] 33%|███▎      | 21/64 [00:41<00:23,  1.82it/s] 34%|███▍      | 22/64 [00:41<00:18,  2.26it/s] 36%|███▌      | 23/64 [00:42<00:16,  2.46it/s] 38%|███▊      | 24/64 [00:42<00:16,  2.39it/s] 39%|███▉      | 25/64 [00:43<00:15,  2.53it/s] 41%|████      | 26/64 [00:43<00:17,  2.12it/s] 42%|████▏     | 27/64 [00:44<00:15,  2.31it/s] 44%|████▍     | 28/64 [00:44<00:12,  2.90it/s] 45%|████▌     | 29/64 [00:44<00:10,  3.48it/s] 47%|████▋     | 30/64 [00:44<00:09,  3.75it/s] 48%|████▊     | 31/64 [00:45<00:15,  2.12it/s] 50%|█████     | 32/64 [00:45<00:14,  2.22it/s] 52%|█████▏    | 33/64 [00:46<00:12,  2.52it/s] 53%|█████▎    | 34/64 [00:47<00:22,  1.33it/s] 55%|█████▍    | 35/64 [00:48<00:17,  1.67it/s] 56%|█████▋    | 36/64 [00:48<00:14,  1.88it/s] 58%|█████▊    | 37/64 [00:48<00:13,  2.00it/s] 59%|█████▉    | 38/64 [00:49<00:12,  2.05it/s] 61%|██████    | 39/64 [00:50<00:18,  1.33it/s] 62%|██████▎   | 40/64 [00:50<00:14,  1.60it/s] 64%|██████▍   | 41/64 [00:51<00:13,  1.72it/s] 66%|██████▌   | 42/64 [00:52<00:12,  1.76it/s] 67%|██████▋   | 43/64 [00:52<00:10,  1.98it/s] 69%|██████▉   | 44/64 [00:52<00:09,  2.21it/s] 70%|███████   | 45/64 [00:53<00:07,  2.44it/s] 72%|███████▏  | 46/64 [00:53<00:06,  2.77it/s] 73%|███████▎  | 47/64 [00:53<00:06,  2.58it/s] 75%|███████▌  | 48/64 [00:54<00:06,  2.47it/s] 77%|███████▋  | 49/64 [00:55<00:11,  1.32it/s] 78%|███████▊  | 50/64 [00:56<00:09,  1.48it/s] 80%|███████▉  | 51/64 [00:56<00:06,  1.86it/s] 81%|████████▏ | 52/64 [00:56<00:06,  1.97it/s] 83%|████████▎ | 53/64 [00:58<00:09,  1.20it/s] 84%|████████▍ | 54/64 [00:59<00:07,  1.31it/s] 86%|████████▌ | 55/64 [01:00<00:09,  1.01s/it] 88%|████████▊ | 56/64 [01:00<00:06,  1.31it/s] 89%|████████▉ | 57/64 [01:01<00:04,  1.53it/s] 91%|█████████ | 58/64 [01:01<00:03,  1.63it/s] 92%|█████████▏| 59/64 [01:01<00:02,  2.04it/s] 94%|█████████▍| 60/64 [01:02<00:02,  1.92it/s] 95%|█████████▌| 61/64 [01:02<00:01,  2.09it/s] 97%|█████████▋| 62/64 [01:03<00:01,  1.85it/s] 98%|█████████▊| 63/64 [01:03<00:00,  2.07it/s]100%|██████████| 64/64 [01:04<00:00,  1.74it/s]100%|██████████| 64/64 [01:04<00:00,  1.01s/it]
+===> corr=5 total=10 acc=50.00% partial=50.00% fmt=0.00%
+===> corr=11 total=20 acc=55.00% partial=55.00% fmt=0.00%
+===> corr=17 total=30 acc=56.67% partial=56.67% fmt=6.67%
+===> corr=20 total=40 acc=50.00% partial=50.00% fmt=5.00%
+===> corr=26 total=50 acc=52.00% partial=54.00% fmt=6.00%
+===> corr=30 total=60 acc=50.00% partial=51.67% fmt=5.00%
+
+FINAL: correct=33/64  acc=51.56%  partial=53.12%  format=6.25%
+
+real	1m23.976s
+user	1m39.192s
+sys	0m3.023s

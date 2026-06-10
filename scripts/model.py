@@ -25,6 +25,7 @@ from config import (
     MESH,
     MODEL_ID,
     RANK,
+    SEED
 )
 
 
@@ -73,7 +74,7 @@ def get_lora_model(base_model, mesh):
         alpha=ALPHA,
     )
     model_input = base_model.get_model_input()
-    lora_model = qwix.apply_lora_to_model(base_model, lora_provider, **model_input)
+    lora_model = qwix.apply_lora_to_model(base_model, lora_provider, **model_input, rngs=nnx.Rngs(SEED))
 
     # Re-shard after wrapping so the adapter weights live on the right devices.
     with jax.set_mesh(mesh):
