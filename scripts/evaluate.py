@@ -30,6 +30,7 @@ from config import (
 from data import SYSTEM_PROMPT, TEMPLATE, build_train_val_test
 from model import build_mesh, download_weights, load_base_model, get_lora_model, load_tokenizer, model_config_for
 from rewards import match_format, match_numbers
+from bootstrap import bootstrap_ci
 
 import os
 from tunix.sft.checkpoint_manager import CheckpointManager
@@ -65,6 +66,9 @@ def generate(question, sampler, eos_tokens, temperature=0.7, top_k=50, top_p=0.9
 
 def evaluate(dataset, sampler, eos_tokens, temperature=0.7, top_k=50, top_p=0.95, num_passes=1):
     corr = partially_corr = corr_format = total = 0
+    correct_flags = []
+    partial_flags = []
+    format_flags = []
 
     for batch in tqdm(dataset):
         answers = batch["answer"]
@@ -92,6 +96,9 @@ def evaluate(dataset, sampler, eos_tokens, temperature=0.7, top_k=50, top_p=0.95
                 if got_corr and got_partial and got_format:
                     break
 
+            correct_flags.append(int(got_corr))
+            partial_flags.append(int(got_partial))
+            format_flags.append(int(got_format))
             corr += int(got_corr)
             partially_corr += int(got_partial)
             corr_format += int(got_format)
@@ -100,7 +107,7 @@ def evaluate(dataset, sampler, eos_tokens, temperature=0.7, top_k=50, top_p=0.95
                 print(f"===> corr={corr} total={total} acc={corr/total*100:.2f}% "
                       f"partial={partially_corr/total*100:.2f}% fmt={corr_format/total*100:.2f}%")
 
-    return corr, total, corr/total*100, partially_corr/total*100, corr_format/total*100
+    return corr, total, corr/total*100, partially_corr/total*100, corr_format/total*100, correct_flags, partial_flags, format_flags
 
 
 def main():
@@ -139,8 +146,15 @@ def main():
             head_dim=cfg.head_dim,
         ),
     )
-    n, t, acc, pacc, facc = evaluate(test_ds, sampler, eos_tokens, **GENERATION_CONFIGS[args.preset])
+    n, t, acc, pacc, facc, correct_flags, partial_flags, format_flags = evaluate(test_ds, sampler, eos_tokens, **GENERATION_CONFIGS[args.preset])
+    cis = bootstrap_ci(correct_flags, partial_flags, format_flags, seed=SEED)
     print(f"\nFINAL: correct={n}/{t}  acc={acc:.2f}%  partial={pacc:.2f}%  format={facc:.2f}%")
+    for name, r in cis.items():
+        print(
+            f"{name}: "
+            f"{100*r['mean']:.2f}% "
+            f"[{100*r['lower']:.2f}%, {100*r['upper']:.2f}%]"
+        )
 
 
 if __name__ == "__main__":
