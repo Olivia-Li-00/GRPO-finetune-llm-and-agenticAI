@@ -37,23 +37,23 @@ match_numbers = re.compile(
 
 
 def match_format_exactly(prompts, completions, **kwargs):
-    """+3 if the whole template parses, 0 otherwise."""
+    """+0.5 if the whole template parses, 0 otherwise."""
     return [
-        0 if match_format.search(r) is None else 3.0
+        0 if match_format.search(r) is None else 0.5
         for r in completions
     ]
 
 
 def match_format_approximately(prompts, completions, **kwargs):
-    """Up to +2.5 for having each of the five expected tags exactly once."""
+    """Up to +0.5 for having each of the five expected tags exactly once."""
     scores = []
     for response in completions:
         s = 0.0
-        s += 0.5 if response.count(reasoning_start) == 1 else -0.5
-        s += 0.5 if response.find(reasoning_start) == 0 else -0.5
-        s += 0.5 if response.count(reasoning_end) == 1 else -0.5
-        s += 0.5 if response.count(solution_start) == 1 else -0.5
-        s += 0.5 if response.count(solution_end) == 1 else -0.5
+        s += 0.1 if response.count(reasoning_start) == 1 else -0.1
+        s += 0.1 if response.find(reasoning_start) == 0 else -0.1
+        s += 0.1 if response.count(reasoning_end) == 1 else -0.1
+        s += 0.1 if response.count(solution_start) == 1 else -0.1
+        s += 0.1 if response.count(solution_end) == 1 else -0.1
         scores.append(s)
     return scores
 
