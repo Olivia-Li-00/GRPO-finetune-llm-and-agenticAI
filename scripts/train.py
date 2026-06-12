@@ -62,6 +62,7 @@ from rewards import REWARD_FNS
 from config import SEED
 import random
 import numpy as np
+import jax
 
 random.seed(SEED)
 np.random.seed(SEED)
@@ -133,6 +134,7 @@ def build_cluster_config(mesh, optimizer, eos_tokens):
             kv_cache_size=MAX_PROMPT_LENGTH + TOTAL_GENERATION_STEPS + 256,
             temperature=TEMPERATURE, top_p=TOP_P, top_k=TOP_K,
             eos_tokens=eos_tokens,
+            seed=SEED,
         ),
     )
 
@@ -173,7 +175,7 @@ def main():
     rl_cluster = rl_cluster_lib.RLCluster(
         actor=lora, reference=base, tokenizer=tokenizer, cluster_config=cluster_cfg,
     )
-    trainer = GRPOLearner(rl_cluster=rl_cluster, reward_fns=REWARD_FNS, algo_config=grpo_cfg)
+    trainer = GRPOLearner(rl_cluster=rl_cluster, reward_fns=REWARD_FNS, algo_config=grpo_cfg, data_shuffle_seed=SEED)
 
     print(f"Starting GRPO training. CKPT_DIR={CKPT_DIR}  MAX_STEPS={MAX_STEPS}")
     trainer.train(train_ds, val_ds)
