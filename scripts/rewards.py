@@ -37,23 +37,23 @@ match_numbers = re.compile(
 
 
 def match_format_exactly(prompts, completions, **kwargs):
-    """+0.5 if the whole template parses, 0 otherwise."""
+    """+1 if the whole template parses, 0 otherwise."""
     return [
-        0 if match_format.search(r) is None else 0.5
+        0 if match_format.search(r) is None else 1
         for r in completions
     ]
 
 
 def match_format_approximately(prompts, completions, **kwargs):
-    """Up to +0.5 for having each of the five expected tags exactly once."""
+    """Up to +1 for having each of the five expected tags exactly once."""
     scores = []
     for response in completions:
         s = 0.0
-        s += 0.1 if response.count(reasoning_start) == 1 else -0.1
-        s += 0.1 if response.find(reasoning_start) == 0 else -0.1
-        s += 0.1 if response.count(reasoning_end) == 1 else -0.1
-        s += 0.1 if response.count(solution_start) == 1 else -0.1
-        s += 0.1 if response.count(solution_end) == 1 else -0.1
+        s += 0.2 if response.count(reasoning_start) == 1 else -0.2
+        s += 0.2 if response.find(reasoning_start) == 0 else -0.2
+        s += 0.2 if response.count(reasoning_end) == 1 else -0.2
+        s += 0.2 if response.count(solution_start) == 1 else -0.2
+        s += 0.2 if response.count(solution_end) == 1 else -0.2
         scores.append(s)
     return scores
 
@@ -72,20 +72,24 @@ def check_answer(prompts, completions, answer, **kwargs):
             scores.append(0)
             continue
         if guess == true:
-            scores.append(3.0)
+            scores.append(4.0)
         elif guess.strip() == true.strip():
-            scores.append(1.5)
+            scores.append(4)
         else:
             try:
-                ratio = float(guess) / float(true)
-                if 0.9 <= ratio <= 1.1:
-                    scores.append(0.5)
-                elif 0.8 <= ratio <= 1.2:
-                    scores.append(0.25)
+                # ratio = float(guess) / float(true)
+                g = float(guess)
+                t = float(true)
+                rel_err = abs(g - t) / max(abs(t), 1e-8)
+                if rel_err <= 0.1:
+                # if 0.9 <= ratio <= 1.1:
+                    scores.append(1.5)
+                # elif 0.8 <= ratio <= 1.2:
+                #     scores.append(0.25)
                 else:
-                    scores.append(-1.0)
+                    scores.append(0)
             except Exception:
-                scores.append(-0.5)
+                scores.append(0)
     return scores
 
 
@@ -110,7 +114,16 @@ def check_numbers(prompts, completions, answer, **kwargs):
             scores.append(0)
             continue
         try:
-            scores.append(1.5 if float(guess.strip()) == float(true.strip()) else 0.0)
+            # ratio = float(guess.strip()) / float(true.strip())
+            g = float(guess.strip())
+            t = float(true.strip())
+            rel_err = abs(g - t) / max(abs(t), 1e-8)
+            if float(guess.strip()) == float(true.strip()):
+                scores.append(6)
+            elif rel_err <= 0.1:
+                scores.append(1.5)
+            else:
+                scores.append(0)
         except Exception:
             scores.append(0)
     return scores
