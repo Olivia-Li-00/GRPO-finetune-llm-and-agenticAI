@@ -1,26 +1,0 @@
-Downloading google/gemma-3-1b-it from Hugging Face...
-Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 24146.83it/s]
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-I0000 00:00:1781296965.709413  460925 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-I0000 00:00:1781296965.710788  460925 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-I0000 00:00:1781296966.863903  460925 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-I0000 00:00:1781296966.864677  460925 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
-Model downloaded to: /home/ext_ziyingli00_gmail_com/.cache/huggingface/hub/models--google--gemma-3-1b-it/snapshots/dcc83ea841ab6100d6b47a070329e1ba4cf78752
-Restored LoRA params from step 3364
-  0%|          | 0/64 [00:00<?, ?it/s]  2%|▏         | 1/64 [00:16<17:02, 16.23s/it]  3%|▎         | 2/64 [00:16<07:21,  7.12s/it]  5%|▍         | 3/64 [00:17<04:18,  4.24s/it]  6%|▋         | 4/64 [00:18<02:59,  2.99s/it]  8%|▊         | 5/64 [00:32<06:49,  6.94s/it]  9%|▉         | 6/64 [00:33<04:34,  4.74s/it] 11%|█         | 7/64 [00:34<03:31,  3.71s/it] 12%|█▎        | 8/64 [00:35<02:29,  2.68s/it] 14%|█▍        | 9/64 [00:36<02:01,  2.20s/it] 16%|█▌        | 10/64 [00:37<01:34,  1.75s/it] 17%|█▋        | 11/64 [00:38<01:30,  1.70s/it] 19%|█▉        | 12/64 [00:39<01:12,  1.39s/it] 20%|██        | 13/64 [00:40<01:06,  1.29s/it] 22%|██▏       | 14/64 [00:41<00:53,  1.07s/it] 23%|██▎       | 15/64 [00:41<00:47,  1.02it/s] 25%|██▌       | 16/64 [00:43<00:49,  1.03s/it] 27%|██▋       | 17/64 [00:43<00:38,  1.22it/s] 28%|██▊       | 18/64 [00:43<00:33,  1.37it/s] 30%|██▉       | 19/64 [00:44<00:31,  1.42it/s] 31%|███▏      | 20/64 [00:45<00:29,  1.49it/s] 33%|███▎      | 21/64 [00:45<00:26,  1.64it/s] 34%|███▍      | 22/64 [00:47<00:37,  1.11it/s] 36%|███▌      | 23/64 [00:47<00:32,  1.25it/s] 38%|███▊      | 24/64 [00:48<00:30,  1.29it/s] 39%|███▉      | 25/64 [00:49<00:28,  1.36it/s] 41%|████      | 26/64 [00:50<00:37,  1.01it/s] 42%|████▏     | 27/64 [00:51<00:30,  1.21it/s] 44%|████▍     | 28/64 [00:52<00:37,  1.05s/it] 45%|████▌     | 29/64 [00:54<00:45,  1.30s/it] 47%|████▋     | 30/64 [00:55<00:43,  1.29s/it] 48%|████▊     | 31/64 [00:56<00:33,  1.02s/it] 50%|█████     | 32/64 [00:56<00:28,  1.14it/s] 52%|█████▏    | 33/64 [00:57<00:27,  1.11it/s] 53%|█████▎    | 34/64 [00:58<00:25,  1.17it/s] 55%|█████▍    | 35/64 [00:59<00:22,  1.31it/s] 56%|█████▋    | 36/64 [00:59<00:22,  1.24it/s] 58%|█████▊    | 37/64 [01:00<00:18,  1.43it/s] 59%|█████▉    | 38/64 [01:01<00:17,  1.49it/s] 61%|██████    | 39/64 [01:01<00:19,  1.31it/s] 62%|██████▎   | 40/64 [01:02<00:17,  1.40it/s] 64%|██████▍   | 41/64 [01:03<00:15,  1.45it/s] 66%|██████▌   | 42/64 [01:04<00:16,  1.33it/s] 67%|██████▋   | 43/64 [01:04<00:13,  1.57it/s] 69%|██████▉   | 44/64 [01:06<00:18,  1.08it/s] 70%|███████   | 45/64 [01:07<00:18,  1.00it/s] 72%|███████▏  | 46/64 [01:07<00:15,  1.13it/s] 73%|███████▎  | 47/64 [01:08<00:13,  1.24it/s] 75%|███████▌  | 48/64 [01:09<00:14,  1.10it/s] 77%|███████▋  | 49/64 [01:10<00:11,  1.31it/s] 78%|███████▊  | 50/64 [01:11<00:13,  1.06it/s] 80%|███████▉  | 51/64 [01:12<00:13,  1.01s/it] 81%|████████▏ | 52/64 [01:13<00:12,  1.05s/it] 83%|████████▎ | 53/64 [01:14<00:10,  1.09it/s] 84%|████████▍ | 54/64 [01:14<00:08,  1.21it/s] 86%|████████▌ | 55/64 [01:15<00:07,  1.15it/s] 88%|████████▊ | 56/64 [01:16<00:06,  1.25it/s] 89%|████████▉ | 57/64 [01:17<00:05,  1.22it/s] 91%|█████████ | 58/64 [01:18<00:05,  1.14it/s] 92%|█████████▏| 59/64 [01:19<00:04,  1.19it/s] 94%|█████████▍| 60/64 [01:20<00:03,  1.07it/s] 95%|█████████▌| 61/64 [01:21<00:02,  1.11it/s] 97%|█████████▋| 62/64 [01:21<00:01,  1.23it/s] 98%|█████████▊| 63/64 [01:23<00:01,  1.05s/it]100%|██████████| 64/64 [01:24<00:00,  1.02it/s]100%|██████████| 64/64 [01:24<00:00,  1.32s/it]
-===> corr=3 total=10 acc=30.00% partial=30.00% fmt=90.00%
-===> corr=9 total=20 acc=45.00% partial=45.00% fmt=90.00%
-===> corr=10 total=30 acc=33.33% partial=33.33% fmt=80.00%
-===> corr=12 total=40 acc=30.00% partial=30.00% fmt=85.00%
-===> corr=16 total=50 acc=32.00% partial=32.00% fmt=84.00%
-===> corr=21 total=60 acc=35.00% partial=35.00% fmt=83.33%
-
-FINAL: correct=21/64  acc=32.81%  partial=32.81%  format=82.81%
-accuracy: 32.81% [21.88%, 43.75%]
-partial_accuracy: 32.81% [21.88%, 43.75%]
-format_accuracy: 82.81% [73.44%, 92.19%]
-
-real	1m41.686s
-user	1m38.288s
-sys	0m3.108s

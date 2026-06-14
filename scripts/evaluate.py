@@ -35,7 +35,7 @@ from bootstrap import bootstrap_ci
 import os
 from tunix.sft.checkpoint_manager import CheckpointManager
 
-DEFAULT_CKPT_ROOT = os.path.expanduser("~/tpu-2026/ckpts_backup/actor")
+DEFAULT_CKPT_ROOT = os.path.expanduser("~/tpu-2026/ckpts_backup/improve_k8") # To change for each version
 DEFAULT_STEP = 3364
 
 def restore_lora(lora_model, ckpt_root: str, step: int | None) -> int:
