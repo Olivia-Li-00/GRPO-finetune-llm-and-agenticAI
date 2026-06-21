@@ -32,7 +32,7 @@ Or alternatively, install and work in jupyterlab instead.
 
 ## Versions and Tags
 
-| Git&nbsp;tag | Version | Logs in tag | Accuracy [95% CI] | Partial [95% CI] | Format [95% CI] |
+| Git&nbsp;tag | Version | Logs in tag | Exact acc. [95% CI] | Partial acc. [95% CI] | Format acc. [95% CI] |
 |---|---|---|---:|---:|---:|
 | `v1` | Base model gemma-3-1b-it | `baseline_evaluate.log` | 39.06% [28.12%, 51.56%] | 40.62% [29.69%, 53.12%] | 4.69% [0.00%, 10.94%] |
 | `v1` | Baseline (K=2 + original reward) | `baseline_train.log`, `LoRA_evaluate.log` | 32.81% [21.88%, 43.75%] | 32.81% [21.88%, 43.75%] | 82.81% [73.44%, 92.19%] |
@@ -41,3 +41,7 @@ Or alternatively, install and work in jupyterlab instead.
 | `v4` | Reward recalibration(K=8 + reward recalibration) | `improve_reward_reweighted_v2.log`, `improve_reward_reweighted_v2_evaluate.log` | 45.31% [34.38%, 57.81%] | 48.44% [35.94%, 60.94%] | 82.81% [71.88%, 92.19%] |
 
 Metrics are from greedy evaluation on the same fixed 64 samples from the GSM8K test  (seed=100), with 95% percentile bootstrap confidence intervals reported (2000 resamples).
+
+## Declaration of AI Tools
+
+AI tools were used to discuss mathematical and theoretical background, LaTex conversion, and syntax troubleshooting.
