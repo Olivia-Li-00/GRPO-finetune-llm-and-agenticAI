@@ -4,6 +4,10 @@ This repository contains the Part I Sections 1-3 implementation and results anal
 
 4 versions exist, v1 for base model gemma-3-1b-it and baseline training reproduction, v2-4 for algorithmic and reward improvements.
 
+## Team
+- Team: chlina
+- Members: zl656, un212, xc401
+
 ## Key Repository Contents
 
 - `report/`: contains the coursework report.
